@@ -1,0 +1,13 @@
+{% macro icon(name) %}
+  {% if name == "pulse" %}
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2 7 4-14 2 7h8"/></svg>
+  {% elif name == "scan" %}
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+  {% elif name == "leaf" %}
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c9.5 0 14-4.5 14-14V4h-3C10.5 4 5 8.5 5 18v3Z"/><path d="M5 21c3-6 6-9 12-12"/></svg>
+  {% elif name == "snowflake" %}
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 7l16 10M20 7 4 17"/><path d="M12 2 9.5 4.5M12 2l2.5 2.5M12 22l-2.5-2.5M12 22l2.5-2.5M4 7 6 4.5M4 7 1.5 8M20 7l-2-2.5M20 7l2.5 1M4 17l2-1M4 17l-2.5 1M20 17l-2 1M20 17l2.5-1"/></svg>
+  {% else %}
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>
+  {% endif %}
+{% endmacro %}

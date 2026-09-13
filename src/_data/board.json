@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "kicker": "Board Update · August 2026",
+    "title": "Culture of Possibility, Realized",
+    "subtitle": "Advancing our mission through innovation and earned-revenue strategies.",
+    "pillars": ["Innovation", "Research", "Earned Revenue"]
+  },
+  "trackRecord": {
+    "eyebrow": "A career built around unlocking institutional value",
+    "headline": "$100M+",
+    "headlineLabel": "generated, influenced, or managed",
+    "categories": ["Philanthropy", "Research", "Commercialization", "Consulting", "Alternative Revenue Generation"],
+    "closing": "Identify undervalued assets, understand who values them, structure the opportunity, and reinvest value into mission.",
+    "partners": [
+      "MGH 1811",
+      "MD PnP",
+      "Louisiana Cancer Research Center",
+      "Association of Migraine Disorders",
+      "UHealth · University of Miami Health System",
+      "Penn State",
+      "Arrowhead Center",
+      "Xavier University of Louisiana",
+      "PXL8 Powders"
+    ]
+  },
+  "whyNow": {
+    "eyebrow": "Why now",
+    "headline": "Food banks need to diversify and become financially resilient",
+    "statValue": "2.5×",
+    "statLabel": "increase in households reporting not enough food or skipped meals",
+    "source": "Liberty Street Economics, “Food Insecurity and Consumer Pessimism,” May 27, 2026",
+    "strainedPillars": ["Philanthropy", "Public Funding"],
+    "newPillars": ["Earned Revenue", "Innovation / Research"]
+  },
+  "provenElsewhere": {
+    "eyebrow": "Proven elsewhere",
+    "headline": "Mission assets can become revenue and capital",
+    "closing": "Different sectors, same strategy: convert trusted assets into priced services, fundable platforms, and sustained capital-generating models.",
+    "cases": [
+      {
+        "org": "Mass General Brigham",
+        "program": "Global Advisory Service",
+        "metric": "~$1.5M ARR",
+        "detail": "~$3B ARR across all alternative revenues and innovation investments"
+      },
+      {
+        "org": "United Teen Equity Center",
+        "program": "Food trucks, meal programs, and mattress recycling",
+        "metric": "~$2M ARR",
+        "detail": "Social enterprise as mission engine"
+      },
+      {
+        "org": "Greater Cleveland Food Bank",
+        "program": "Prepared meal contracts",
+        "metric": "~$5M ARR",
+        "detail": "Kitchen capacity + food expertise → contracted meal revenue"
+      },
+      {
+        "org": "Cystic Fibrosis Foundation",
+        "program": "+ CFF Mission Ventures",
+        "metric": "~$575M",
+        "detail": "Venture philanthropy, investment, and resulting royalty payments"
+      }
+    ]
+  },
+  "lanes": {
+    "eyebrow": "What we are doing now",
+    "headline": "Four lanes in development",
+    "sub": "Each lane starts with assessing mission-alignment, expertise, convening power, and revenue potential.",
+    "closing": "Where mission-aligned ideas become revenue, solutions, and scalable impact.",
+    "labName": "Roadrunner Mission Lab",
+    "items": [
+      {
+        "name": "Food is Medicine",
+        "icon": "pulse",
+        "color": "crimson",
+        "figure": "~$100k+",
+        "figureLabel": "Advisory contracts, with a $1.5M grant pipeline behind them"
+      },
+      {
+        "name": "Research + Data Sharing",
+        "icon": "scan",
+        "color": "azure",
+        "figure": "~$2.85M",
+        "figureLabel": "Potential grants and subawards"
+      },
+      {
+        "name": "Waste-to-Value Solutions",
+        "icon": "leaf",
+        "color": "sage",
+        "figure": "~$100k + $200k",
+        "figureLabel": "Cost savings, plus seed grants in motion"
+      },
+      {
+        "name": "Cold Chain + Local Agriculture",
+        "icon": "snowflake",
+        "color": "teal",
+        "figure": "~$4M",
+        "figureLabel": "Capital outlay and USDA grants"
+      }
+    ]
+  },
+  "whereThisLeads": {
+    "eyebrow": "Where this leads",
+    "headline": "Core support + Mission Lab = capital readiness",
+    "coreLabel": "Roadrunner Food Bank",
+    "coreDetail": "Philanthropy and federal, state, and local grants are the bedrock of the mission.",
+    "labLabel": "Roadrunner Mission Lab",
+    "labDetail": "Mission-aligned revenue, research subawards, solutions, and operating proof points.",
+    "outcomeEyebrow": "Stronger RRFB",
+    "outcomes": ["More resilient", "Greater operating credibility", "Stronger case for public + private capital"],
+    "capitalValue": "$25M+",
+    "capitalLabel": "Statewide infrastructure & capital investment"
+  },
+  "closing": {
+    "eyebrow": "Culture of Possibility, Realized",
+    "headline": "A stronger Roadrunner means a stronger food-security system for New Mexico.",
+    "body": "The Mission Lab is not innovation for innovation's sake. It is about building the revenue, capacity, and resilience to serve more New Mexicans — for the long term."
+  }
+}

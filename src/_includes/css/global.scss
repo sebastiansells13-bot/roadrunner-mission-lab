@@ -1,0 +1,162 @@
+@use "variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+:root {
+  --c-crimson: #{$color-crimson};
+  --c-azure: #{$color-azure};
+  --c-sage: #{$color-sage};
+  --c-teal: #{$color-teal};
+  --c-gold: #{$color-gold};
+}
+
+body {
+  margin: 0;
+  background: $color-ink;
+  color: $color-text;
+  font-family: $font-body;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.wrapper {
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-inline: $gutter;
+}
+
+.wrapper--narrow {
+  max-width: $max-width-narrow;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-display;
+  font-weight: 600;
+  line-height: 1.12;
+  margin: 0 0 0.6em;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 3vw + 1.6rem, 4.2rem);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 1.6vw + 1.3rem, 2.6rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.eyebrow {
+  font-family: $font-mono;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.4em;
+  height: 2px;
+  background: currentColor;
+  display: inline-block;
+}
+
+.section {
+  padding-block: clamp(3.5rem, 6vw, 6.5rem);
+  position: relative;
+}
+
+.section--paper {
+  background: $color-paper;
+  color: $color-text-on-paper;
+}
+
+.section--paper .eyebrow {
+  color: $color-crimson;
+}
+
+.section--raised {
+  background: $color-ink-raised;
+}
+
+.section-head {
+  max-width: 42rem;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.section-head .eyebrow {
+  color: $color-gold;
+  margin-bottom: 1rem;
+}
+
+.section--paper .section-head .eyebrow {
+  color: $color-crimson;
+}
+
+.muted {
+  color: $color-text-muted;
+}
+
+.section--paper .muted {
+  color: $color-text-on-paper-muted;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: $color-crimson;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: $radius-sm;
+  z-index: 100;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}

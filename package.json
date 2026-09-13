@@ -1,0 +1,24 @@
+{
+  "name": "roadrunner-mission-lab",
+  "version": "1.0.0",
+  "description": "Roadrunner Mission Lab — Innovation & Earned Revenue microsite for Roadrunner Food Bank of New Mexico. Eleventy + Pages CMS, deployed to GitHub Pages.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "npm run clean && npm run sass && cross-env ELEVENTY_ENV=production eleventy",
+    "build:ci": "npm run build",
+    "clean": "rimraf dev docs",
+    "sass": "sass --style=compressed --no-source-map --quiet-deps src/_includes/css/index.scss src/_includes/css/index.css",
+    "watch:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "watch:sass": "npm run sass -- --watch"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-navigation": "^1.0.5",
+    "cross-env": "^10.1.0",
+    "rimraf": "^6.0.1",
+    "sass": "^1.81.0"
+  }
+}

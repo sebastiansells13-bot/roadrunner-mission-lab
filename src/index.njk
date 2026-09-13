@@ -1,0 +1,175 @@
+---
+layout: layouts/page.njk
+title: Home
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+{% from "components/icons.njk" import icon %}
+
+<section class="hero" id="board-update">
+  <div class="wrapper">
+    <p class="eyebrow hero__kicker">{{ board.hero.kicker }}</p>
+    <h1>{{ board.hero.title }}</h1>
+    <p class="hero__subtitle">{{ board.hero.subtitle }}</p>
+    <ul class="hero__pillars">
+      {% for pillar in board.hero.pillars %}
+      <li>{{ pillar }}</li>
+      {% endfor %}
+    </ul>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#lanes">See the four lanes</a>
+      <a class="btn btn--ghost" href="/strategy/">Read the full strategy report</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ board.trackRecord.eyebrow }}</p>
+    </div>
+    <div class="stat-block">
+      <div class="stat-block__figure">
+        <div class="stat-block__value">{{ board.trackRecord.headline }}</div>
+        <p class="stat-block__label">{{ board.trackRecord.headlineLabel }}</p>
+      </div>
+      <div>
+        <div class="chip-row">
+          {% for c in board.trackRecord.categories %}
+          <span class="chip">{{ c }}</span>
+          {% endfor %}
+        </div>
+        <p style="margin-top:1.25rem; font-size:1.05rem;">{{ board.trackRecord.closing }}</p>
+      </div>
+    </div>
+    <div class="partner-strip">
+      {% for p in board.trackRecord.partners %}
+      <span>{{ p }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ board.whyNow.eyebrow }}</p>
+      <h2>{{ board.whyNow.headline }}</h2>
+    </div>
+    <div class="stat-block">
+      <div class="stat-block__figure">
+        <div class="stat-block__value">{{ board.whyNow.statValue }}</div>
+        <p class="stat-block__label">{{ board.whyNow.statLabel }}</p>
+        <p class="muted" style="font-size:0.75rem; margin-top:0.75rem;">{{ board.whyNow.source }}</p>
+      </div>
+      <div>
+        <p class="muted">Two pillars are under strain. Two are new — and built for resilience.</p>
+        <div class="bridge">
+          {% for p in board.whyNow.strainedPillars %}
+          <div class="bridge__pillar">{{ p }}</div>
+          {% endfor %}
+          {% for p in board.whyNow.newPillars %}
+          <div class="bridge__pillar bridge__pillar--new">{{ p }}</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ board.provenElsewhere.eyebrow }}</p>
+      <h2>{{ board.provenElsewhere.headline }}</h2>
+    </div>
+    <div class="case-grid">
+      {% for c in board.provenElsewhere.cases %}
+      <div class="case-card">
+        <span class="case-card__org">{{ c.org }}</span>
+        <span class="case-card__program">{{ c.program }}</span>
+        <span class="case-card__metric">{{ c.metric }}</span>
+        <span class="case-card__detail">{{ c.detail }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <p style="margin-top:2rem; font-size:1.1rem; max-width:40rem;"><strong>{{ board.provenElsewhere.closing }}</strong></p>
+  </div>
+</section>
+
+<section class="section lanes-feature" id="lanes">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ board.lanes.eyebrow }}</p>
+      <h2>{{ board.lanes.headline }}</h2>
+      <p class="muted">{{ board.lanes.sub }}</p>
+    </div>
+
+    <div class="lane-grid">
+      {% for lane in board.lanes.items %}
+      <div class="lane-card" style="--lane-color: var(--c-{{ lane.color }});">
+        <div class="lane-card__icon">{{ icon(lane.icon) }}</div>
+        <h3 class="lane-card__name">{{ lane.name }}</h3>
+        <div>
+          <div class="lane-card__figure">{{ lane.figure }}</div>
+          <p class="lane-card__figure-label">{{ lane.figureLabel }}</p>
+        </div>
+      </div>
+      {% endfor %}
+
+      <div class="lane-grid__connector">converges into</div>
+    </div>
+
+    <div style="text-align:center;">
+      <span class="lab-badge">🐦 {{ board.lanes.labName }}</span>
+      <p class="muted" style="max-width:34rem; margin:1rem auto 0;">{{ board.lanes.closing }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="where-this-leads">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ board.whereThisLeads.eyebrow }}</p>
+      <h2>{{ board.whereThisLeads.headline }}</h2>
+    </div>
+    <div class="leads-diagram">
+      <div class="leads-box">
+        <strong>{{ board.whereThisLeads.coreLabel }}</strong>
+        <p class="muted" style="font-size:0.88rem; margin:0.5rem 0 0;">{{ board.whereThisLeads.coreDetail }}</p>
+      </div>
+      <div class="leads-diagram__arrow">+</div>
+      <div class="leads-box">
+        <strong>{{ board.whereThisLeads.labLabel }}</strong>
+        <p class="muted" style="font-size:0.88rem; margin:0.5rem 0 0;">{{ board.whereThisLeads.labDetail }}</p>
+      </div>
+      <div class="leads-diagram__arrow">→</div>
+      <div class="leads-box leads-box--outcome">
+        <p class="eyebrow" style="color:#8fc98e;">{{ board.whereThisLeads.outcomeEyebrow }}</p>
+        <ul>
+          {% for o in board.whereThisLeads.outcomes %}
+          <li>{{ o }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="leads-diagram__arrow">→</div>
+      <div class="leads-box leads-box--capital">
+        <div class="stat-block__value">{{ board.whereThisLeads.capitalValue }}</div>
+        <p class="stat-block__label">{{ board.whereThisLeads.capitalLabel }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing-banner" id="help">
+  <div class="wrapper">
+    <p class="eyebrow" style="justify-content:center; color: var(--c-gold, #e8b23c);">{{ board.closing.eyebrow }}</p>
+    <h2>{{ board.closing.headline }}</h2>
+    <p>{{ board.closing.body }}</p>
+    <div class="hero__actions" style="justify-content:center;">
+      <a class="btn btn--primary" href="/strategy/">Read the full strategy report</a>
+      <a class="btn btn--ghost" href="mailto:{{ strategy.author.email }}">{{ strategy.author.closing }}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+// Roadrunner Mission Lab — design tokens
+// Deliberately not the client-site-starter defaults: a warm-dark editorial
+// palette pulled from RRFB's own brand marks (crimson + desert gold) instead
+// of the starter's white/blue system-font look.
+
+$color-ink: #0b1a33; // deep desert-night navy — primary background
+$color-ink-raised: #12233f; // panel / card background, one step lighter
+$color-ink-line: rgba(245, 241, 232, 0.14); // hairline borders on dark
+$color-paper: #f5f1e8; // warm paper — primary background on light sections
+$color-paper-raised: #ffffff;
+$color-paper-line: rgba(11, 26, 51, 0.12);
+
+$color-text: #f5f1e8; // body text on dark
+$color-text-muted: rgba(245, 241, 232, 0.68);
+$color-text-on-paper: #17223b;
+$color-text-on-paper-muted: rgba(23, 34, 59, 0.66);
+
+$color-crimson: #d6273c;
+$color-gold: #e8b23c;
+$color-azure: #3a7ca5;
+$color-sage: #5b8c5a;
+$color-teal: #2e9e97;
+
+$lane-colors: (
+  "crimson": $color-crimson,
+  "azure": $color-azure,
+  "sage": $color-sage,
+  "teal": $color-teal,
+);
+
+$font-display: "Fraunces", "Iowan Old Style", "Georgia", serif;
+$font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+$max-width: 74rem;
+$max-width-narrow: 46rem;
+$gutter: 1.5rem;
+
+$radius-sm: 0.5rem;
+$radius-md: 0.9rem;
+$radius-lg: 1.4rem;

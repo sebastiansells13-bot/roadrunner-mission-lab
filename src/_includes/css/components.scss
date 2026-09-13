@@ -1,0 +1,837 @@
+@use "sass:map";
+@use "variables" as *;
+
+// ---------------------------------------------------------------- header
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(11, 26, 51, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $color-ink-line;
+}
+
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 0.9rem;
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  font-family: $font-display;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: $color-text;
+}
+
+.site-header__mark {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, $color-crimson, $color-gold);
+  flex-shrink: 0;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: $color-text-muted;
+  transition: color 0.15s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a.is-active {
+  color: $color-gold;
+}
+
+.site-header__toggle {
+  display: none;
+}
+
+@media (max-width: 44rem) {
+  .site-header nav ul {
+    display: none;
+  }
+}
+
+// ---------------------------------------------------------------- buttons
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.3rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primary {
+  background: $color-crimson;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #b81f32;
+}
+
+.btn--ghost {
+  border-color: rgba(245, 241, 232, 0.35);
+  color: $color-text;
+}
+
+.btn--ghost:hover {
+  border-color: $color-gold;
+  color: $color-gold;
+}
+
+.section--paper .btn--ghost {
+  border-color: rgba(23, 34, 59, 0.3);
+  color: $color-text-on-paper;
+}
+
+// ---------------------------------------------------------------- hero
+.hero {
+  padding-block: clamp(4.5rem, 9vw, 8rem) clamp(3rem, 6vw, 5rem);
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, rgba(214, 39, 60, 0.22), transparent 60%),
+    radial-gradient(40rem 24rem at -10% 20%, rgba(232, 178, 60, 0.14), transparent 55%);
+}
+
+.hero__kicker {
+  color: $color-gold;
+}
+
+.hero h1 {
+  max-width: 40rem;
+  margin-top: 1.1rem;
+}
+
+.hero__subtitle {
+  max-width: 34rem;
+  font-size: 1.15rem;
+  color: $color-text-muted;
+}
+
+.hero__pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.8rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__pillars li {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid $color-ink-line;
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  color: $color-text-muted;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2.2rem;
+}
+
+// ---------------------------------------------------------------- stat block
+.stat-block {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+@media (max-width: 44rem) {
+  .stat-block {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-block__figure {
+  background: $color-ink-raised;
+  border: 1px solid $color-ink-line;
+  border-radius: $radius-lg;
+  padding: 2rem 1.75rem;
+}
+
+.stat-block__value {
+  font-family: $font-display;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  color: $color-gold;
+  line-height: 1;
+}
+
+.stat-block__label {
+  margin-top: 0.6rem;
+  color: $color-text-muted;
+  font-size: 0.95rem;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.chip {
+  font-size: 0.8rem;
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  background: rgba(245, 241, 232, 0.06);
+  border: 1px solid $color-ink-line;
+  color: $color-text-muted;
+}
+
+.section--paper .chip {
+  background: rgba(23, 34, 59, 0.05);
+  border-color: $color-paper-line;
+  color: $color-text-on-paper-muted;
+}
+
+.chip--muted {
+  opacity: 0.65;
+}
+
+.chip--live {
+  color: $color-gold;
+  border-color: rgba(232, 178, 60, 0.5);
+}
+
+// ---------------------------------------------------------------- partner strip
+.partner-strip {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid $color-ink-line;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+}
+
+.partner-strip span {
+  font-size: 0.82rem;
+  color: $color-text-muted;
+}
+
+.partner-strip span:not(:last-child)::after {
+  content: "·";
+  margin-left: 1rem;
+  color: rgba(245, 241, 232, 0.3);
+}
+
+// ---------------------------------------------------------------- pillars / bridge
+.bridge {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 44rem) {
+  .bridge {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bridge__pillar {
+  border-radius: $radius-md;
+  padding: 1.1rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px dashed rgba(245, 241, 232, 0.25);
+  color: $color-text-muted;
+}
+
+.bridge__pillar--new {
+  border-style: solid;
+  border-color: $color-gold;
+  color: $color-gold;
+  background: rgba(232, 178, 60, 0.08);
+}
+
+// ---------------------------------------------------------------- case studies
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 62rem) {
+  .case-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 34rem) {
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.case-card {
+  background: $color-paper-raised;
+  border: 1px solid $color-paper-line;
+  border-radius: $radius-md;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.case-card__org {
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.case-card__program {
+  font-size: 0.85rem;
+  color: $color-text-on-paper-muted;
+  min-height: 2.6em;
+}
+
+.case-card__metric {
+  font-family: $font-mono;
+  color: $color-crimson;
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
+}
+
+.case-card__detail {
+  font-size: 0.82rem;
+  color: $color-text-on-paper-muted;
+}
+
+// ---------------------------------------------------------------- LANES (slide 5 emphasis)
+.lanes-feature {
+  background: $color-ink;
+  position: relative;
+  overflow: hidden;
+}
+
+.lanes-feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(50rem 26rem at 50% -12%, rgba(214, 39, 60, 0.18), transparent 60%);
+  pointer-events: none;
+}
+
+.lane-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+  position: relative;
+}
+
+@media (max-width: 62rem) {
+  .lane-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 34rem) {
+  .lane-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lane-card {
+  background: $color-ink-raised;
+  border: 1px solid $color-ink-line;
+  border-top: 3px solid var(--lane-color, #{$color-gold});
+  border-radius: $radius-lg;
+  padding: 1.6rem 1.4rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.lane-card:hover {
+  transform: translateY(-4px);
+}
+
+.lane-card__icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.85rem;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--lane-color, #{$color-gold}) 22%, transparent);
+  color: var(--lane-color, #{$color-gold});
+}
+
+.lane-card__icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.lane-card__name {
+  font-family: $font-display;
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.lane-card__figure {
+  font-family: $font-mono;
+  font-size: 1.5rem;
+  color: var(--lane-color, #{$color-gold});
+  line-height: 1;
+}
+
+.lane-card__figure-label {
+  font-size: 0.85rem;
+  color: $color-text-muted;
+  margin-top: 0.35rem;
+}
+
+.lane-grid__connector {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  color: $color-text-muted;
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.lane-grid__connector::before,
+.lane-grid__connector::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: $color-ink-line;
+}
+
+.lab-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(214, 39, 60, 0.18), rgba(232, 178, 60, 0.18));
+  border: 1px solid rgba(232, 178, 60, 0.4);
+  font-family: $font-display;
+  font-size: 1.05rem;
+}
+
+// ---------------------------------------------------------------- where this leads
+.leads-diagram {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.leads-diagram > .leads-box {
+  flex: 1 1 13rem;
+}
+
+.leads-diagram__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-gold;
+  font-size: 1.4rem;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 56rem) {
+  .leads-diagram__arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+}
+
+.leads-box {
+  border: 1px solid $color-ink-line;
+  border-radius: $radius-md;
+  padding: 1.5rem;
+  background: $color-ink-raised;
+}
+
+.leads-box--outcome {
+  border-color: rgba(91, 140, 90, 0.5);
+}
+
+.leads-box--capital {
+  border-color: $color-gold;
+  background: rgba(232, 178, 60, 0.08);
+  text-align: center;
+}
+
+.leads-box--capital .stat-block__value {
+  font-size: 2.4rem;
+}
+
+.leads-box ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.1rem;
+  color: $color-text-muted;
+  font-size: 0.9rem;
+}
+
+.leads-box ul li {
+  margin-bottom: 0.35rem;
+}
+
+// ---------------------------------------------------------------- closing banner
+.closing-banner {
+  text-align: center;
+  padding-block: clamp(4rem, 8vw, 7rem);
+  background: linear-gradient(180deg, $color-ink 0%, #08131f 100%);
+}
+
+.closing-banner h2 {
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.closing-banner p {
+  max-width: 34rem;
+  margin-inline: auto;
+  color: $color-text-muted;
+  font-size: 1.05rem;
+}
+
+// ---------------------------------------------------------------- strategy report: reasons / portfolio / vetting
+.reason-grid,
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+@media (max-width: 56rem) {
+  .reason-grid,
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 36rem) {
+  .reason-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reason-card {
+  border: 1px solid $color-ink-line;
+  border-radius: $radius-md;
+  padding: 1.5rem;
+  background: $color-ink-raised;
+}
+
+.reason-card__number {
+  font-family: $font-mono;
+  color: $color-crimson;
+  font-size: 0.85rem;
+}
+
+.reason-card__stat {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid $color-ink-line;
+  font-size: 0.85rem;
+  color: $color-gold;
+}
+
+.portfolio-card {
+  border: 1px solid $color-paper-line;
+  border-radius: $radius-md;
+  padding: 1.4rem;
+  background: $color-paper-raised;
+}
+
+.portfolio-card__kind {
+  font-family: $font-mono;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: $color-crimson;
+}
+
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 56rem) {
+  .criteria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.criteria-card {
+  border-radius: $radius-md;
+  padding: 1.3rem;
+  background: $color-ink-raised;
+  border: 1px solid $color-ink-line;
+}
+
+.criteria-card__number {
+  font-family: $font-display;
+  font-size: 1.6rem;
+  color: $color-gold;
+}
+
+.decision-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.decision-list li {
+  display: flex;
+  gap: 0.9rem;
+  align-items: baseline;
+  padding: 0.85rem 1rem;
+  border-radius: $radius-sm;
+  background: rgba(245, 241, 232, 0.05);
+  border: 1px solid $color-ink-line;
+}
+
+.decision-status {
+  font-family: $font-mono;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  background: rgba(232, 178, 60, 0.15);
+  color: $color-gold;
+}
+
+.decision-status--now {
+  background: rgba(214, 39, 60, 0.18);
+  color: #ff8a94;
+}
+
+// ---------------------------------------------------------------- proof points
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+@media (max-width: 56rem) {
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.proof-card {
+  border: 1px solid $color-paper-line;
+  border-radius: $radius-lg;
+  padding: 1.6rem;
+  background: $color-paper-raised;
+}
+
+.proof-card__value {
+  font-family: $font-display;
+  font-size: 2.1rem;
+  color: $color-crimson;
+}
+
+// ---------------------------------------------------------------- roadmap timeline
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+  position: relative;
+}
+
+@media (max-width: 56rem) {
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+.timeline-card {
+  border: 1px solid $color-ink-line;
+  border-radius: $radius-lg;
+  padding: 1.6rem;
+  background: $color-ink-raised;
+  position: relative;
+}
+
+.timeline-card__label {
+  font-family: $font-mono;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: $color-text-muted;
+}
+
+.timeline-card__name {
+  font-family: $font-display;
+  font-size: 1.3rem;
+  margin: 0.35rem 0 0.2rem;
+}
+
+.timeline-card__value {
+  font-family: $font-mono;
+  color: $color-gold;
+  font-size: 1.6rem;
+}
+
+// ---------------------------------------------------------------- help columns
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+@media (max-width: 56rem) {
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.help-column {
+  border-radius: $radius-lg;
+  border: 1px solid $color-ink-line;
+  padding: 1.5rem;
+  background: $color-ink-raised;
+}
+
+.help-column__item {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid $color-ink-line;
+}
+
+.help-column__item h4 {
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0 0 0.3rem;
+}
+
+.help-column__item p {
+  font-size: 0.85rem;
+  color: $color-text-muted;
+  margin: 0;
+}
+
+.section--paper .help-column {
+  background: $color-paper-raised;
+  border-color: $color-paper-line;
+  color: $color-text-on-paper;
+}
+
+.section--paper .help-column__item {
+  border-color: $color-paper-line;
+}
+
+.section--paper .help-column p,
+.section--paper .help-column__item p {
+  color: $color-text-on-paper-muted;
+}
+
+// ---------------------------------------------------------------- author card
+.author-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: $radius-lg;
+  border: 1px solid $color-ink-line;
+  background: $color-ink-raised;
+  flex-wrap: wrap;
+}
+
+.author-card__avatar {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, $color-crimson, $color-gold);
+  flex-shrink: 0;
+}
+
+// ---------------------------------------------------------------- table of contents (strategy page)
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.toc a {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid $color-ink-line;
+  color: $color-text-muted;
+}
+
+.toc a:hover {
+  color: $color-gold;
+  border-color: $color-gold;
+}
+
+// ---------------------------------------------------------------- footer
+.site-footer {
+  padding-block: 3rem;
+  border-top: 1px solid $color-ink-line;
+  background: #08131f;
+}
+
+.site-footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: $color-text-muted;
+}
+
+.site-footer a {
+  color: $color-text-muted;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: $color-gold;
+}

@@ -1,0 +1,201 @@
+{
+  "hero": {
+    "kicker": "Innovation & Earned Revenue · Full Strategy Report",
+    "title": "Developing New Mission-Aligned Revenue Streams",
+    "subtitle": "An overview of Roadrunner Food Bank's innovation and earned-revenue programming.",
+    "distribution": "Limited distribution — working draft",
+    "issued": "August 2026"
+  },
+  "whoWeAre": {
+    "eyebrow": "Who is RRFB",
+    "headline": "Roadrunner Food Bank is New Mexico's food-access backbone",
+    "mission": "Provide nourishing food to New Mexicans through vibrant community partnerships and passionate public and private support.",
+    "facts": [
+      "Founded in 1979; Roadrunner Food Bank (RRFB) is New Mexico's largest food non-profit dedicated to solving food insecurity and the only Feeding America member in the state.",
+      "48.5M pounds of food distributed in 2025.",
+      "400+ partner agencies spanning schools, shelters, churches, health clinics, senior centers, tribal entities, colleges, and community organizations.",
+      "80% of all food provided through partner agencies was procured, warehoused, and distributed by RRFB.",
+      "Access models include pantries, mobile distributions, SNAP and benefits support, home delivery, workforce training, Food Is Medicine, and refrigerated lockers."
+    ],
+    "coreIdea": "RRFB is not just a distributor — it is statewide infrastructure with trust, logistics, data, and community reach.",
+    "serviceAreas": ["Roadrunner Food Bank", "The Food Depot"]
+  },
+  "whyNow": {
+    "eyebrow": "Why now",
+    "headline": "Rising need and constrained funding require a more resilient model",
+    "sub": "Innovation and earned revenue strengthen the mission; they do not replace philanthropy or public support.",
+    "reasons": [
+      {
+        "number": "01",
+        "title": "Need is rising",
+        "body": "Food insecurity in New Mexico and across the U.S. is rising at the same time as fuel and food costs are also increasing.",
+        "stat": "1 in 6 New Mexicans are food insecure"
+      },
+      {
+        "number": "02",
+        "title": "Traditional funding is not enough",
+        "body": "Grants, philanthropy, and public funding remain essential. Additive revenue sources support long-term operating capacity and help expand infrastructure.",
+        "stat": "90%+ of RRFB current revenue is from contributions and grants"
+      },
+      {
+        "number": "03",
+        "title": "RRFB has underused capabilities",
+        "body": "Borrowing practices from other segments, RRFB can package expertise, relationships, data, and operating infrastructure into marketable services and ventures.",
+        "stat": "100+ years of combined logistics, cross-border trade, and Food Is Medicine expertise"
+      }
+    ],
+    "closing": [
+      "The strategic question is no longer “how do we raise more?”",
+      "It is “what can build and sustain RRFB's mission?”"
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "What we are doing",
+    "headline": "Current operating portfolio",
+    "sub": "Five lanes create a practical operating portfolio: three earned-revenue verticals plus two enabling innovation lanes.",
+    "items": [
+      {
+        "name": "FIM Advisory Services",
+        "kind": "Earned revenue",
+        "description": "Readiness assessments, training, implementation support, and pricing tests for CBO and health-system partners."
+      },
+      {
+        "name": "Medically Tailored Meals",
+        "kind": "Earned revenue",
+        "description": "Assess production and distribution, payer pathways, clinical partnership fit, unit economics, and launch requirements."
+      },
+      {
+        "name": "Waste-to-Value Solutions",
+        "kind": "Earned revenue",
+        "description": "Explore biochar and other side-stream revenue opportunities linked to food waste and operations."
+      },
+      {
+        "name": "Research Programming",
+        "kind": "Enabling innovation",
+        "description": "Stand up and operationalize SOWs, subawards, data governance, evaluation budgets, and community-based research roles with academia."
+      },
+      {
+        "name": "FIM Innovation Pilots",
+        "kind": "Enabling innovation",
+        "description": "Identify right-sized software and technology to prepare CBOs for Medicaid reimbursement for Food Is Medicine."
+      }
+    ],
+    "source": "Source: RRFB Innovation & Earned Revenue v7 deck."
+  },
+  "vetting": {
+    "eyebrow": "Vetting process",
+    "headline": "Select what fits the mission, the market, and the operating model",
+    "sub": "The goal is disciplined innovation: advance work that can prove value, and pause or stop ideas that lack demand, capacity, or capital fit.",
+    "criteria": [
+      { "number": 1, "name": "Mission fit", "description": "Addresses food access, health, infrastructure, or waste — and strengthens RRFB's core role." },
+      { "number": 2, "name": "Demand fit", "description": "A funder, payer, partner, or customer has a clear reason to pay for the solution." },
+      { "number": 3, "name": "Operating fit", "description": "Uses RRFB capabilities without distracting from essential distribution work." },
+      { "number": 4, "name": "Financial fit", "description": "Can show pricing, cost, risk, and capital requirements before scaling." }
+    ],
+    "selected": [
+      "Opportunities with mission alignment and a real payment pathway",
+      "Work that can be piloted in 6–12 months",
+      "Projects with clear owners, partners, and evidence needs",
+      "Models that can become fundable, financeable, or generate recurring revenue"
+    ],
+    "decisions": [
+      { "status": "Prioritize now", "item": "FIM advisory / CBO Medicaid readiness" },
+      { "status": "Prioritize now", "item": "FIM technology pilots for reimbursement readiness" },
+      { "status": "Validate", "item": "Southern New Mexico partner-support model" },
+      { "status": "Build pipeline", "item": "Research programming with academic partners" },
+      { "status": "Explore", "item": "Medically tailored meals and waste-to-value concepts" }
+    ],
+    "rule": "Decision rule: scale what proves value; redesign or stop what does not.",
+    "source": "Source: RRFB Innovation & Earned Revenue materials."
+  },
+  "proofPoints": {
+    "eyebrow": "Proof points",
+    "headline": "Momentum is demonstrating the model",
+    "items": [
+      {
+        "number": 1,
+        "value": "$700k",
+        "title": "Rural Health Innovation Fund proposal",
+        "description": "Packages Medicaid-readiness and Food Is Medicine implementation support into a fundable, statewide CBO readiness model."
+      },
+      {
+        "number": 2,
+        "value": "$250K",
+        "title": "SNM Partner support",
+        "description": "Translates Southern New Mexico access needs into lockers, route delivery, startup operations, project tracking, and outcomes reporting."
+      },
+      {
+        "number": 3,
+        "value": "~$50k",
+        "title": "FIM advisory partnership with Luminar Health",
+        "description": "Tests whether RRFB can package FIM reimbursement expertise into repeatable assessments, training, and implementation support with high statewide CBO demand."
+      }
+    ],
+    "source": "Source: RRFB board update materials."
+  },
+  "roadmap": {
+    "eyebrow": "Where we want to go",
+    "headline": "The next three years should move from proof to a scale-ready portfolio",
+    "closing": "Scale what proves value; stop or restructure what does not.",
+    "stages": [
+      {
+        "label": "Year 1",
+        "name": "Prove",
+        "value": "$300K",
+        "description": "Validate demand, pricing, delivery model, and unit economics. Convert the strongest opportunities into paying or funded work."
+      },
+      {
+        "label": "24 months",
+        "name": "Scale",
+        "value": "$1.5M",
+        "description": "Expand proven service lines, build recurring customer relationships, and develop shared operating infrastructure."
+      },
+      {
+        "label": "Year 3",
+        "name": "Ready to grow",
+        "value": "Scale-ready",
+        "description": "Operate a diversified portfolio with clear governance, staffing, capital needs, and pathways for rapid expansion."
+      }
+    ]
+  },
+  "help": {
+    "eyebrow": "Where we may need help",
+    "headline": "Support from a venture builder and other resources",
+    "sub": "RRFB knows the need and has statewide operating assets; external venture support can help turn opportunities into executable, financeable models.",
+    "columns": [
+      {
+        "title": "Monetizing and marketing RRFB assets",
+        "description": "Trust, logistics, partners, data, facilities, Food Is Medicine expertise.",
+        "items": [
+          { "title": "Governance + risk", "description": "How should RRFB efficiently manage pilots, partners, conflicts, and stop/go decisions?" },
+          { "title": "Communications", "description": "How should RRFB effectively communicate expertise and/or challenges it's looking to solve collaboratively with prospective partners?" }
+        ]
+      },
+      {
+        "title": "Venture program support",
+        "description": "Disciplined customer discovery, market tests, deal structure, and capital strategy.",
+        "items": [
+          { "title": "Pricing + unit economics", "description": "What price, cost, margin, and staffing assumptions hold up?" },
+          { "title": "Partner introductions", "description": "Warm connections to health systems, CDFIs, venture studios, advisors, and buyers." }
+        ]
+      },
+      {
+        "title": "Scale-ready portfolio",
+        "description": "Clear priorities, owner model, unit economics, risk plan, and decision package.",
+        "items": [
+          { "title": "Capital stack design", "description": "Which opportunities need grants, contracts, PRIs, debt, or blended capital? What does RRFB need to do to be in the best position for these vehicles?" },
+          { "title": "Pitch + decision package", "description": "A board- and funder-ready case for what to scale, fund, finance, or pause." }
+        ]
+      }
+    ],
+    "closing": "Best use of the program: help RRFB make the strongest opportunities investable, not just interesting."
+  },
+  "author": {
+    "name": "Jameson MacDonnell, MBA",
+    "title": "Strategic Advisor to the CEO, Innovation and Earned Revenue",
+    "email": "Jameson.MacDonnell@rrfb.org",
+    "closing": "Questions / Feedback / Open to uncovering opportunities together.",
+    "distribution": "Limited distribution — working draft",
+    "issued": "August 2026"
+  }
+}

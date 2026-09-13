@@ -1,0 +1,220 @@
+---
+layout: layouts/page.njk
+title: Full Strategy Report
+description: The complete Innovation & Earned Revenue capital strategy — who RRFB is, why now, the operating portfolio, vetting process, proof points, roadmap, and where help is needed.
+eleventyNavigation:
+  key: Strategy
+  order: 2
+---
+
+<section class="hero" style="padding-bottom: 2.5rem;">
+  <div class="wrapper">
+    <p class="eyebrow hero__kicker">{{ strategy.hero.kicker }}</p>
+    <h1>{{ strategy.hero.title }}</h1>
+    <p class="hero__subtitle">{{ strategy.hero.subtitle }}</p>
+    <div class="chip-row">
+      <span class="chip chip--live">{{ strategy.hero.distribution }}</span>
+      <span class="chip">{{ strategy.hero.issued }}</span>
+    </div>
+    <nav class="toc" aria-label="Report sections">
+      <a href="#who-we-are">Who is RRFB</a>
+      <a href="#why-now">Why now</a>
+      <a href="#portfolio">Operating portfolio</a>
+      <a href="#vetting">Vetting process</a>
+      <a href="#proof-points">Proof points</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#help">Where we need help</a>
+    </nav>
+  </div>
+</section>
+
+<section class="section section--paper" id="who-we-are">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ strategy.whoWeAre.eyebrow }}</p>
+      <h2>{{ strategy.whoWeAre.headline }}</h2>
+      <p style="font-size:1.1rem;"><strong>{{ strategy.whoWeAre.mission }}</strong></p>
+    </div>
+    <ul style="max-width:44rem; padding-left:1.2rem; display:grid; gap:0.6rem;">
+      {% for fact in strategy.whoWeAre.facts %}
+      <li>{{ fact }}</li>
+      {% endfor %}
+    </ul>
+    <div class="leads-box" style="margin-top:2rem; max-width:44rem; background:#17223b; border-color:#17223b; color:#f5f1e8;">
+      <strong>{{ strategy.whoWeAre.coreIdea }}</strong>
+    </div>
+    <p class="muted" style="margin-top:1.25rem; font-size:0.85rem;">Service areas: {{ strategy.whoWeAre.serviceAreas | join(" · ") }}</p>
+  </div>
+</section>
+
+<section class="section" id="why-now">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ strategy.whyNow.eyebrow }}</p>
+      <h2>{{ strategy.whyNow.headline }}</h2>
+      <p class="muted">{{ strategy.whyNow.sub }}</p>
+    </div>
+    <div class="reason-grid">
+      {% for r in strategy.whyNow.reasons %}
+      <div class="reason-card">
+        <div class="reason-card__number">{{ r.number }}</div>
+        <h3>{{ r.title }}</h3>
+        <p class="muted" style="font-size:0.92rem;">{{ r.body }}</p>
+        <div class="reason-card__stat">{{ r.stat }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="closing-banner" style="padding-block: 2.5rem 0; background:none;">
+      {% for line in strategy.whyNow.closing %}
+      <p style="font-size:1.15rem; margin:0.2rem 0;"><strong>{{ line }}</strong></p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper" id="portfolio">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ strategy.portfolio.eyebrow }}</p>
+      <h2>{{ strategy.portfolio.headline }}</h2>
+      <p class="muted">{{ strategy.portfolio.sub }}</p>
+    </div>
+    <div class="portfolio-grid">
+      {% for item in strategy.portfolio.items %}
+      <div class="portfolio-card">
+        <div class="portfolio-card__kind">{{ item.kind }}</div>
+        <h3>{{ item.name }}</h3>
+        <p class="muted" style="font-size:0.92rem;">{{ item.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="muted" style="font-size:0.78rem; margin-top:1.5rem;">{{ strategy.portfolio.source }}</p>
+  </div>
+</section>
+
+<section class="section" id="vetting">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ strategy.vetting.eyebrow }}</p>
+      <h2>{{ strategy.vetting.headline }}</h2>
+      <p class="muted">{{ strategy.vetting.sub }}</p>
+    </div>
+    <div class="criteria-grid">
+      {% for c in strategy.vetting.criteria %}
+      <div class="criteria-card">
+        <div class="criteria-card__number">{{ c.number }}</div>
+        <h3>{{ c.name }}</h3>
+        <p class="muted" style="font-size:0.88rem;">{{ c.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="stat-block" style="margin-top:2.5rem; align-items:start;">
+      <div>
+        <h3>What moves forward</h3>
+        <ul class="muted" style="padding-left:1.2rem; display:grid; gap:0.5rem; font-size:0.92rem;">
+          {% for s in strategy.vetting.selected %}
+          <li>{{ s }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3>Near-term portfolio decisions</h3>
+        <ul class="decision-list">
+          {% for d in strategy.vetting.decisions %}
+          <li>
+            <span class="decision-status {% if 'now' in d.status | lower %}decision-status--now{% endif %}">{{ d.status }}</span>
+            <span>{{ d.item }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="leads-box" style="margin-top:2rem; text-align:center;">
+      <strong>{{ strategy.vetting.rule }}</strong>
+    </div>
+    <p class="muted" style="font-size:0.78rem; margin-top:1rem;">{{ strategy.vetting.source }}</p>
+  </div>
+</section>
+
+<section class="section section--paper" id="proof-points">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ strategy.proofPoints.eyebrow }}</p>
+      <h2>{{ strategy.proofPoints.headline }}</h2>
+    </div>
+    <div class="proof-grid">
+      {% for p in strategy.proofPoints.items %}
+      <div class="proof-card">
+        <div class="reason-card__number" style="color:#d6273c;">{{ p.number }}</div>
+        <div class="proof-card__value">{{ p.value }}</div>
+        <h3>{{ p.title }}</h3>
+        <p class="muted" style="font-size:0.9rem;">{{ p.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="muted" style="font-size:0.78rem; margin-top:1.5rem;">{{ strategy.proofPoints.source }}</p>
+  </div>
+</section>
+
+<section class="section" id="roadmap">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ strategy.roadmap.eyebrow }}</p>
+      <h2>{{ strategy.roadmap.headline }}</h2>
+    </div>
+    <div class="timeline">
+      {% for s in strategy.roadmap.stages %}
+      <div class="timeline-card">
+        <div class="timeline-card__label">{{ s.label }}</div>
+        <h3 class="timeline-card__name">{{ s.name }}</h3>
+        <div class="timeline-card__value">{{ s.value }}</div>
+        <p class="muted" style="font-size:0.88rem; margin-top:0.75rem;">{{ s.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <p style="margin-top:2rem; font-size:1.1rem;"><strong>{{ strategy.roadmap.closing }}</strong></p>
+  </div>
+</section>
+
+<section class="section section--paper" id="help">
+  <div class="wrapper">
+    <div class="section-head">
+      <p class="eyebrow">{{ strategy.help.eyebrow }}</p>
+      <h2>{{ strategy.help.headline }}</h2>
+      <p class="muted">{{ strategy.help.sub }}</p>
+    </div>
+    <div class="help-grid">
+      {% for col in strategy.help.columns %}
+      <div class="help-column">
+        <h3>{{ col.title }}</h3>
+        <p class="muted" style="font-size:0.88rem;">{{ col.description }}</p>
+        {% for item in col.items %}
+        <div class="help-column__item">
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="leads-box" style="margin-top:2rem; text-align:center; background:#17223b; border-color:#17223b; color:#f5f1e8;">
+      <strong>{{ strategy.help.closing }}</strong>
+    </div>
+  </div>
+</section>
+
+<section class="closing-banner">
+  <div class="wrapper">
+    <div class="author-card" style="margin-inline:auto; max-width:34rem; text-align:left;">
+      <div class="author-card__avatar" aria-hidden="true"></div>
+      <div>
+        <strong>{{ strategy.author.name }}</strong>
+        <p class="muted" style="margin:0.2rem 0 0; font-size:0.9rem;">{{ strategy.author.title }}</p>
+        <p style="margin:0.4rem 0 0; font-size:0.9rem;"><a href="mailto:{{ strategy.author.email }}" style="color:#e8b23c;">{{ strategy.author.email }}</a></p>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:1.5rem; font-size:0.8rem;">{{ strategy.author.distribution }} &middot; {{ strategy.author.issued }}</p>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+{
+  "name": "Roadrunner Mission Lab",
+  "org": "Roadrunner Food Bank of New Mexico",
+  "tagline": "Innovation, research, and earned revenue — built to strengthen the mission, not replace it.",
+  "description": "Roadrunner Mission Lab is Roadrunner Food Bank of New Mexico's innovation and earned-revenue initiative: four active lanes turning mission-aligned assets into resilient, diversified funding.",
+  "language": "en",
+  "issued": "August 2026",
+  "navigation": [
+    { "text": "The Four Lanes", "url": "/#lanes" },
+    { "text": "Board Update", "url": "/#board-update" },
+    { "text": "Full Strategy Report", "url": "/strategy/" },
+    { "text": "Get Involved", "url": "/#help" }
+  ]
+}
