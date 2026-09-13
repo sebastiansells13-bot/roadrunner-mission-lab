@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
-title: Full Strategy Report
-description: The complete Innovation & Earned Revenue capital strategy — who RRFB is, why now, the operating portfolio, vetting process, proof points, roadmap, and where help is needed.
+title: How It Works
+description: How Roadrunner Mission Lab works — who RRFB is, why this initiative exists, what we're building, how we choose what to pursue, our early traction, our roadmap, and how to partner with us.
 eleventyNavigation:
   key: Strategy
   order: 2
@@ -13,17 +13,16 @@ eleventyNavigation:
     <h1>{{ strategy.hero.title }}</h1>
     <p class="hero__subtitle">{{ strategy.hero.subtitle }}</p>
     <div class="chip-row">
-      <span class="chip chip--live">{{ strategy.hero.distribution }}</span>
       <span class="chip">{{ strategy.hero.issued }}</span>
     </div>
-    <nav class="toc" aria-label="Report sections">
+    <nav class="toc" aria-label="Page sections">
       <a href="#who-we-are">Who is RRFB</a>
       <a href="#why-now">Why now</a>
-      <a href="#portfolio">Operating portfolio</a>
-      <a href="#vetting">Vetting process</a>
-      <a href="#proof-points">Proof points</a>
+      <a href="#portfolio">What we're building</a>
+      <a href="#vetting">How we choose</a>
+      <a href="#proof-points">Early traction</a>
       <a href="#roadmap">Roadmap</a>
-      <a href="#help">Where we need help</a>
+      <a href="#help">Partner with us</a>
     </nav>
   </div>
 </section>
@@ -88,7 +87,6 @@ eleventyNavigation:
       </div>
       {% endfor %}
     </div>
-    <p class="muted" style="font-size:0.78rem; margin-top:1.5rem;">{{ strategy.portfolio.source }}</p>
   </div>
 </section>
 
@@ -119,7 +117,7 @@ eleventyNavigation:
         </ul>
       </div>
       <div>
-        <h3>Near-term portfolio decisions</h3>
+        <h3>Current priorities</h3>
         <ul class="decision-list">
           {% for d in strategy.vetting.decisions %}
           <li>
@@ -134,7 +132,6 @@ eleventyNavigation:
     <div class="leads-box" style="margin-top:2rem; text-align:center;">
       <strong>{{ strategy.vetting.rule }}</strong>
     </div>
-    <p class="muted" style="font-size:0.78rem; margin-top:1rem;">{{ strategy.vetting.source }}</p>
   </div>
 </section>
 
@@ -154,7 +151,6 @@ eleventyNavigation:
       </div>
       {% endfor %}
     </div>
-    <p class="muted" style="font-size:0.78rem; margin-top:1.5rem;">{{ strategy.proofPoints.source }}</p>
   </div>
 </section>
 
@@ -207,7 +203,8 @@ eleventyNavigation:
 
 <section class="closing-banner">
   <div class="wrapper">
-    <div class="author-card" style="margin-inline:auto; max-width:34rem; text-align:left;">
+    <p style="font-size:1.1rem; max-width:30rem; margin-inline:auto;"><strong>{{ strategy.author.closing }}</strong></p>
+    <div class="author-card" style="margin:1.75rem auto 0; max-width:34rem; text-align:left;">
       <div class="author-card__avatar" aria-hidden="true"></div>
       <div>
         <strong>{{ strategy.author.name }}</strong>
@@ -215,6 +212,6 @@ eleventyNavigation:
         <p style="margin:0.4rem 0 0; font-size:0.9rem;"><a href="mailto:{{ strategy.author.email }}" style="color:#e8b23c;">{{ strategy.author.email }}</a></p>
       </div>
     </div>
-    <p class="muted" style="margin-top:1.5rem; font-size:0.8rem;">{{ strategy.author.distribution }} &middot; {{ strategy.author.issued }}</p>
+    <p class="muted" style="margin-top:1.5rem; font-size:0.8rem;">{{ strategy.author.issued }}</p>
   </div>
 </section>

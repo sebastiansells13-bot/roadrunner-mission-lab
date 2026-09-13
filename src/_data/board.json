@@ -1,30 +1,12 @@
 {
   "hero": {
-    "kicker": "Board Update · August 2026",
-    "title": "Culture of Possibility, Realized",
-    "subtitle": "Advancing our mission through innovation and earned-revenue strategies.",
+    "kicker": "Roadrunner Food Bank of New Mexico",
+    "title": "Roadrunner Mission Lab",
+    "subtitle": "We're turning our trust, logistics, and food-security expertise into new revenue, research, and partnerships — so we can serve more New Mexicans for the long term.",
     "pillars": ["Innovation", "Research", "Earned Revenue"]
   },
-  "trackRecord": {
-    "eyebrow": "A career built around unlocking institutional value",
-    "headline": "$100M+",
-    "headlineLabel": "generated, influenced, or managed",
-    "categories": ["Philanthropy", "Research", "Commercialization", "Consulting", "Alternative Revenue Generation"],
-    "closing": "Identify undervalued assets, understand who values them, structure the opportunity, and reinvest value into mission.",
-    "partners": [
-      "MGH 1811",
-      "MD PnP",
-      "Louisiana Cancer Research Center",
-      "Association of Migraine Disorders",
-      "UHealth · University of Miami Health System",
-      "Penn State",
-      "Arrowhead Center",
-      "Xavier University of Louisiana",
-      "PXL8 Powders"
-    ]
-  },
   "whyNow": {
-    "eyebrow": "Why now",
+    "eyebrow": "Why this exists",
     "headline": "Food banks need to diversify and become financially resilient",
     "statValue": "2.5×",
     "statLabel": "increase in households reporting not enough food or skipped meals",
@@ -33,7 +15,7 @@
     "newPillars": ["Earned Revenue", "Innovation / Research"]
   },
   "provenElsewhere": {
-    "eyebrow": "Proven elsewhere",
+    "eyebrow": "A model that's already working",
     "headline": "Mission assets can become revenue and capital",
     "closing": "Different sectors, same strategy: convert trusted assets into priced services, fundable platforms, and sustained capital-generating models.",
     "cases": [
@@ -64,9 +46,9 @@
     ]
   },
   "lanes": {
-    "eyebrow": "What we are doing now",
-    "headline": "Four lanes in development",
-    "sub": "Each lane starts with assessing mission-alignment, expertise, convening power, and revenue potential.",
+    "eyebrow": "Inside the Mission Lab",
+    "headline": "Four lanes turning ideas into revenue and impact",
+    "sub": "Each lane starts with the same test: mission-alignment, expertise, convening power, and revenue potential.",
     "closing": "Where mission-aligned ideas become revenue, solutions, and scalable impact.",
     "labName": "Roadrunner Mission Lab",
     "items": [
@@ -104,17 +86,17 @@
     "eyebrow": "Where this leads",
     "headline": "Core support + Mission Lab = capital readiness",
     "coreLabel": "Roadrunner Food Bank",
-    "coreDetail": "Philanthropy and federal, state, and local grants are the bedrock of the mission.",
+    "coreDetail": "Philanthropy and federal, state, and local grants remain the bedrock of the mission.",
     "labLabel": "Roadrunner Mission Lab",
-    "labDetail": "Mission-aligned revenue, research subawards, solutions, and operating proof points.",
-    "outcomeEyebrow": "Stronger RRFB",
-    "outcomes": ["More resilient", "Greater operating credibility", "Stronger case for public + private capital"],
+    "labDetail": "Mission-aligned revenue, research partnerships, new solutions, and operating proof points.",
+    "outcomeEyebrow": "A stronger RRFB",
+    "outcomes": ["More resilient", "Greater operating credibility", "A stronger case for public + private capital"],
     "capitalValue": "$25M+",
-    "capitalLabel": "Statewide infrastructure & capital investment"
+    "capitalLabel": "Statewide infrastructure & capital investment we're working toward"
   },
   "closing": {
     "eyebrow": "Culture of Possibility, Realized",
     "headline": "A stronger Roadrunner means a stronger food-security system for New Mexico.",
-    "body": "The Mission Lab is not innovation for innovation's sake. It is about building the revenue, capacity, and resilience to serve more New Mexicans — for the long term."
+    "body": "The Mission Lab isn't innovation for its own sake. It's how we build the revenue, capacity, and resilience to serve more New Mexicans — for the long term."
   }
 }

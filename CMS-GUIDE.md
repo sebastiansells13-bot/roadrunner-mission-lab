@@ -1,7 +1,7 @@
 # Editing this site's content
 
-You can update everything on this site — the board update, the four lanes,
-the full strategy report — without touching any code.
+You can update everything on this site — the homepage, the four lanes, the
+"How It Works" page — without touching any code.
 
 ## 1. Log in
 
@@ -11,14 +11,19 @@ the full strategy report — without touching any code.
 ## 2. What you can edit
 
 - **Site Settings** — site name, tagline, top navigation links.
-- **Board Update (Culture of Possibility Realized)** — the homepage story: the
-  hero, the track-record stat, the "why now" stat, the four case studies, the
-  **Four Lanes** (Food Is Medicine, Research + Data Sharing, Waste-to-Value,
-  Cold Chain + Local Agriculture — each with its own figure and color), the
-  "where this leads" diagram, and the closing statement.
-- **Full Strategy Report** — every section of the `/strategy/` page: who RRFB
-  is, why now, the operating portfolio, the vetting criteria and near-term
-  decisions, proof points, the 3-year roadmap, and where help is needed.
+- **Homepage (Roadrunner Mission Lab)** — the hero, the "why now" stat, the
+  four case studies, the **Four Lanes** (Food Is Medicine, Research + Data
+  Sharing, Waste-to-Value, Cold Chain + Local Agriculture — each with its own
+  figure and color), the "where this leads" diagram, and the closing
+  statement.
+- **How It Works (Strategy Page)** — every section of the `/strategy/` page:
+  who RRFB is, why this exists, the five program areas, how we choose what
+  to pursue, early traction, the 3-year roadmap, and how to partner with us.
+
+Remember this site is written for people outside RRFB — funders, health
+systems, researchers, potential partners — so keep new copy in that voice:
+explain things, don't assume the reader already knows RRFB's internal
+shorthand.
 
 ## 3. Making a change
 

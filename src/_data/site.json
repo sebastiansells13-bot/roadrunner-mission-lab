@@ -7,8 +7,7 @@
   "issued": "August 2026",
   "navigation": [
     { "text": "The Four Lanes", "url": "/#lanes" },
-    { "text": "Board Update", "url": "/#board-update" },
-    { "text": "Full Strategy Report", "url": "/strategy/" },
-    { "text": "Get Involved", "url": "/#help" }
+    { "text": "How It Works", "url": "/strategy/" },
+    { "text": "Partner With Us", "url": "/strategy/#help" }
   ]
 }

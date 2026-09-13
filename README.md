@@ -1,19 +1,21 @@
 # Roadrunner Mission Lab
 
-A microsite for Roadrunner Food Bank of New Mexico's innovation and
-earned-revenue initiative — **Roadrunner Mission Lab**.
+A public-facing microsite introducing **Roadrunner Mission Lab** — Roadrunner
+Food Bank of New Mexico's innovation and earned-revenue initiative — to
+funders, health-system partners, researchers, and anyone else who wants to
+understand what it is and how to get involved.
 
-Built from two source documents:
+Adapted from two internal source documents (an August 2026 board update and
+a working-draft capital-strategy deck) and rewritten for an external
+audience — no internal-only framing (board-meeting language, distribution
+notices, asks addressed to a specific consulting program):
 
-- *Culture of Possibility, Realized* (board update, August 2026) — the
-  homepage narrative, with the **Four Lanes** (slide 5 — Food Is Medicine,
-  Research + Data Sharing, Waste-to-Value Solutions, Cold Chain + Local
-  Agriculture) as the centerpiece.
-- *Innovation & Earned Revenue: Capital Strategy* (working draft, August
-  2026) — reproduced in full on the [`/strategy/`](src/strategy.njk) page:
-  who RRFB is, why now, the current operating portfolio, the vetting
-  process, proof points, the 3-year roadmap, and where outside help is
-  needed.
+- The homepage tells the Mission Lab story, with the **Four Lanes** (Food Is
+  Medicine, Research + Data Sharing, Waste-to-Value Solutions, Cold Chain +
+  Local Agriculture) as the centerpiece.
+- [`/strategy/`](src/strategy.njk) ("How It Works") covers who RRFB is, why
+  this initiative exists, the five program areas, how opportunities get
+  chosen, early traction, the 3-year roadmap, and how to partner with us.
 
 Eleventy (11ty) + Nunjucks + Sass, content editable through [Pages
 CMS](https://pagescms.org) (see [CMS-GUIDE.md](CMS-GUIDE.md)), deployed to
@@ -41,8 +43,8 @@ Visit http://localhost:8080/.
 |---|---|
 | `.pages.yml` | Pages CMS content model |
 | `src/_data/site.json` | Site name, tagline, navigation |
-| `src/_data/board.json` | Board-update content (homepage) |
-| `src/_data/strategy.json` | Full strategy report content (`/strategy/`) |
+| `src/_data/board.json` | Homepage content |
+| `src/_data/strategy.json` | "How It Works" page content (`/strategy/`) |
 | `src/_includes/css/` | Design tokens + styles (Sass) |
 | `.github/workflows/build-deploy.yml` | CI: build + deploy to GitHub Pages |
 | `CMS-GUIDE.md` | Content-editor walkthrough |

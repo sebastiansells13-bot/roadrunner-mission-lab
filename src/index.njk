@@ -7,7 +7,7 @@ eleventyNavigation:
 ---
 {% from "components/icons.njk" import icon %}
 
-<section class="hero" id="board-update">
+<section class="hero">
   <div class="wrapper">
     <p class="eyebrow hero__kicker">{{ board.hero.kicker }}</p>
     <h1>{{ board.hero.title }}</h1>
@@ -19,34 +19,7 @@ eleventyNavigation:
     </ul>
     <div class="hero__actions">
       <a class="btn btn--primary" href="#lanes">See the four lanes</a>
-      <a class="btn btn--ghost" href="{{ '/strategy/' | url }}">Read the full strategy report</a>
-    </div>
-  </div>
-</section>
-
-<section class="section section--paper">
-  <div class="wrapper">
-    <div class="section-head">
-      <p class="eyebrow">{{ board.trackRecord.eyebrow }}</p>
-    </div>
-    <div class="stat-block">
-      <div class="stat-block__figure">
-        <div class="stat-block__value">{{ board.trackRecord.headline }}</div>
-        <p class="stat-block__label">{{ board.trackRecord.headlineLabel }}</p>
-      </div>
-      <div>
-        <div class="chip-row">
-          {% for c in board.trackRecord.categories %}
-          <span class="chip">{{ c }}</span>
-          {% endfor %}
-        </div>
-        <p style="margin-top:1.25rem; font-size:1.05rem;">{{ board.trackRecord.closing }}</p>
-      </div>
-    </div>
-    <div class="partner-strip">
-      {% for p in board.trackRecord.partners %}
-      <span>{{ p }}</span>
-      {% endfor %}
+      <a class="btn btn--ghost" href="{{ '/strategy/' | url }}">How it works</a>
     </div>
   </div>
 </section>
@@ -168,8 +141,8 @@ eleventyNavigation:
     <h2>{{ board.closing.headline }}</h2>
     <p>{{ board.closing.body }}</p>
     <div class="hero__actions" style="justify-content:center;">
-      <a class="btn btn--primary" href="{{ '/strategy/' | url }}">Read the full strategy report</a>
-      <a class="btn btn--ghost" href="mailto:{{ strategy.author.email }}">{{ strategy.author.closing }}</a>
+      <a class="btn btn--primary" href="{{ '/strategy/' | url }}">See how it works</a>
+      <a class="btn btn--ghost" href="{{ '/strategy/#help' | url }}">Partner with us</a>
     </div>
   </div>
 </section>
