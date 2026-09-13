@@ -205,7 +205,9 @@ eleventyNavigation:
   <div class="wrapper">
     <p style="font-size:1.1rem; max-width:30rem; margin-inline:auto;"><strong>{{ strategy.author.closing }}</strong></p>
     <div class="author-card" style="margin:1.75rem auto 0; max-width:34rem; text-align:left;">
-      <div class="author-card__avatar" aria-hidden="true"></div>
+      <div class="author-card__avatar">
+        <img src="{{ '/img/brand/mark.png' | url }}" alt="" width="179" height="129">
+      </div>
       <div>
         <strong>{{ strategy.author.name }}</strong>
         <p class="muted" style="margin:0.2rem 0 0; font-size:0.9rem;">{{ strategy.author.title }}</p>

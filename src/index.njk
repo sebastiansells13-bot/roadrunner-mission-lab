@@ -95,7 +95,10 @@ eleventyNavigation:
     </div>
 
     <div style="text-align:center;">
-      <span class="lab-badge">🐦 {{ board.lanes.labName }}</span>
+      <span class="lab-badge">
+        <img src="{{ '/img/brand/mark.png' | url }}" alt="" width="179" height="129">
+        {{ board.lanes.labName }}
+      </span>
       <p class="muted" style="max-width:34rem; margin:1rem auto 0;">{{ board.lanes.closing }}</p>
     </div>
   </div>
