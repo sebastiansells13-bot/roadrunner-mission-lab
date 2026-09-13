@@ -50,7 +50,10 @@ module.exports = function (eleventyConfig) {
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
-    pathPrefix: "/",
+    // Project page: served at https://<user>.github.io/roadrunner-mission-lab/,
+    // not at the domain root. Every internal absolute link/asset path must go
+    // through the `url` filter so it picks up this prefix.
+    pathPrefix: "/roadrunner-mission-lab/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",

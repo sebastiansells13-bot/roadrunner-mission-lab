@@ -1,13 +1,13 @@
 <header class="site-header">
   <div class="wrapper">
-    <a class="site-header__brand" href="/">
+    <a class="site-header__brand" href="{{ '/' | url }}">
       <span class="site-header__mark" aria-hidden="true"></span>
       {{ site.name }}
     </a>
     <nav aria-label="Primary">
       <ul>
         {% for item in site.navigation %}
-        <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+        <li><a href="{{ item.url | url }}">{{ item.text }}</a></li>
         {% endfor %}
       </ul>
     </nav>

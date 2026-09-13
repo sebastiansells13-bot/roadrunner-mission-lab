@@ -19,7 +19,7 @@ eleventyNavigation:
     </ul>
     <div class="hero__actions">
       <a class="btn btn--primary" href="#lanes">See the four lanes</a>
-      <a class="btn btn--ghost" href="/strategy/">Read the full strategy report</a>
+      <a class="btn btn--ghost" href="{{ '/strategy/' | url }}">Read the full strategy report</a>
     </div>
   </div>
 </section>
@@ -168,7 +168,7 @@ eleventyNavigation:
     <h2>{{ board.closing.headline }}</h2>
     <p>{{ board.closing.body }}</p>
     <div class="hero__actions" style="justify-content:center;">
-      <a class="btn btn--primary" href="/strategy/">Read the full strategy report</a>
+      <a class="btn btn--primary" href="{{ '/strategy/' | url }}">Read the full strategy report</a>
       <a class="btn btn--ghost" href="mailto:{{ strategy.author.email }}">{{ strategy.author.closing }}</a>
     </div>
   </div>
