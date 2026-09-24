@@ -12,6 +12,7 @@ content:
       - { name: org, label: "Organization name", type: string, required: true }
       - { name: tagline, label: "Tagline", type: string, required: true }
       - { name: description, label: "SEO description", type: text, options: { maxlength: 200 } }
+      - { name: url, label: "Live site URL (used for share previews)", type: string }
       - name: navigation
         label: "Top navigation links"
         type: object

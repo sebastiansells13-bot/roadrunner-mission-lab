@@ -52,13 +52,27 @@
   color: $color-gold;
 }
 
-.site-header__toggle {
-  display: none;
-}
-
+// Only three links, so on phones they drop to a compact row under the logo
+// instead of hiding behind a menu toggle.
 @media (max-width: 44rem) {
+  // Two-row header on phones: keep anchor jumps clear of it.
+  html {
+    scroll-padding-top: 7.5rem;
+  }
+
+  .site-header .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding-block: 0.75rem;
+  }
+
   .site-header nav ul {
-    display: none;
+    gap: 1.25rem;
+  }
+
+  .site-header nav a {
+    font-size: 0.82rem;
   }
 }
 
@@ -449,15 +463,12 @@
 }
 
 // ---------------------------------------------------------------- where this leads
+// A fixed box/arrow/box track layout: a wrapping flex row used to strand an
+// arrow at the end of a line, and on phones put arrows beside boxes.
 .leads-diagram {
-  display: flex;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
   gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.leads-diagram > .leads-box {
-  flex: 1 1 13rem;
 }
 
 .leads-diagram__arrow {
@@ -466,13 +477,16 @@
   justify-content: center;
   color: $color-gold;
   font-size: 1.4rem;
-  flex: 0 0 auto;
 }
 
-@media (max-width: 56rem) {
+@media (max-width: 62rem) {
+  .leads-diagram {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
   .leads-diagram__arrow {
     transform: rotate(90deg);
-    align-self: center;
   }
 }
 
@@ -525,6 +539,7 @@
   margin-inline: auto;
   color: $color-text-muted;
   font-size: 1.05rem;
+  text-wrap: balance;
 }
 
 // ---------------------------------------------------------------- strategy report: reasons / portfolio / vetting
@@ -546,6 +561,23 @@
   .reason-grid,
   .portfolio-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+// Five program areas: three earned-revenue verticals on top, the two enabling
+// lanes sharing the row beneath instead of leaving an empty third cell.
+@media (min-width: 56.01rem) {
+  .portfolio-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .portfolio-card {
+    grid-column: span 2;
+  }
+
+  .portfolio-card:nth-child(4):nth-last-child(2),
+  .portfolio-card:nth-child(5):last-child {
+    grid-column: span 3;
   }
 }
 
@@ -594,6 +626,12 @@
 @media (max-width: 56rem) {
   .criteria-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 36rem) {
+  .criteria-grid {
+    grid-template-columns: 1fr;
   }
 }
 
